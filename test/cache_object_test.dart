@@ -1,11 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter_cache_manager/src/cache_object.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
-import 'package:test/test.dart';
 
 void main() {
   // Tests with sqflite are broken, because sqflite doesn't provide testing yet.
+  TestWidgetsFlutterBinding.ensureInitialized();
 
   test('Test adding files to cache sql store', () async {
     var url =
